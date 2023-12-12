@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg" href="/assets/images/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			IAQ | AirGuard | The Indoor Air Quality Specialists | IAQ Sensors |
+			LoRaWAN ` &` NBIoT
+		</title>
+		<link rel="stylesheet" href="styles.css" />
+		<meta http-equiv="refresh" content="300" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/490fe1bf87.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+	</head>
+	<body>
+		<section class="iaq-data container" style="padding-block: 5em">
+			<div class="iaq-text">
+				<h2 class="iaq-data-title">
+					See the air
+					<span style="color: var(--clr-primary-500)">we</span> are currently
+					breathing.
+				</h2>
+				<div class="location-tag">
+					<h3>Live data from AirGuard HQ</h3>
+				</div>
+			</div>
+
+			<div class="realtime-data-display">
+				<div class="realtime-nav">
+					<span
+						class="material-symbols-outlined"
+						style="
+							font-size: 40px;
+							color: #353535;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							margin-right: 10px;
+						"
+					>
+						location_on
+					</span>
+					<h2 class="realtime-data-title">Remex Centre</h2>
+				</div>
+				<div class="data-container">
+					<div class="data-rows">
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/550/550250.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="co2data"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 1rem">
+										CO<sub style="font-size: 0.75rem">2</sub> ppm
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/5183/5183078.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="tvocdata"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 1rem">TVOC ppb</p>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/3166/3166904.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="pm25data"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 1rem">PM2.5 ug/m3</p>
+								</div>
+							</div>
+						</div> -->
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/3166/3166904.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="pm10data"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 1rem">PM10 ug/m3</p>
+								</div>
+							</div>
+						</div>
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/841/841988.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="gas1data"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 1rem">Formaldehyde ppb</p>
+								</div>
+							</div>
+						</div>
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/1843/1843544.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="tempdata"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 1rem">
+										Temperature <br />
+										°C
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/727/727790.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="humiditydata"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 1rem">Relative Humidity %</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="realtime-bottom-text">
+						<p>Realtime data from our office floor</p>
+						<p>Last updated: <span id="lastupdated"></span></p>
+						<script>
+							document.getElementById('lastupdated').textContent =
+								'' + new Date();
+						</script>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
