@@ -9,7 +9,7 @@
 			LoRaWAN ` &` NBIoT
 		</title>
 		<link rel="stylesheet" href="styles.css" />
-		<meta http-equiv="refresh" content="300" />
+		<meta http-equiv="refresh" content="40" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -26,7 +26,15 @@
 		/>
 	</head>
 	<body>
-		<section class="iaq-data container" style="padding-block: 5em">
+		<div class="navbar">
+			<div class="navbar-container">
+				<img
+					src="https://images.squarespace-cdn.com/content/v1/604e2ddf7f654b286b8bbcc1/8d91e9bf-aeab-4232-97e4-7e363107e83b/AIRGUARD-01-01.png?format=1500w"
+					alt=""
+				/>
+			</div>
+		</div>
+		<section class="iaq-data container" style="padding-block: 7em">
 			<div class="iaq-text">
 				<h2 class="iaq-data-title">
 					See the air
@@ -69,8 +77,46 @@
 								<div class="data-card-text">
 									<p><span id="co2data"></span></p>
 									<script src="realtime.js"></script>
-									<p style="font-size: 1rem">
-										CO<sub style="font-size: 0.75rem">2</sub> ppm
+									<p style="font-size: 0.75rem; font-weight: 500">
+										CO<sub style="font-size: 0.45rem; font-weight: 500">2</sub>
+										ppm
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/3166/3166904.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="pm25data"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 0.75rem; font-weight: 500">
+										PM2.5 µg/m&sup3
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="data-card-container">
+							<div class="data-card">
+								<div class="data-card-icon">
+									<img
+										class="parameter-icon"
+										src="https://cdn-icons-png.flaticon.com/128/3166/3166904.png"
+										alt=""
+									/>
+								</div>
+								<div class="data-card-text">
+									<p><span id="pm10data"></span></p>
+									<script src="realtime.js"></script>
+									<p style="font-size: 0.75rem; font-weight: 500">
+										PM10 µg/m&sup3
 									</p>
 								</div>
 							</div>
@@ -87,42 +133,11 @@
 								<div class="data-card-text">
 									<p><span id="tvocdata"></span></p>
 									<script src="realtime.js"></script>
-									<p style="font-size: 1rem">TVOC ppb</p>
+									<p style="font-size: 0.75rem; font-weight: 500">TVOC ppb</p>
 								</div>
 							</div>
 						</div>
-						<!-- <div class="data-card-container">
-							<div class="data-card">
-								<div class="data-card-icon">
-									<img
-										class="parameter-icon"
-										src="https://cdn-icons-png.flaticon.com/128/3166/3166904.png"
-										alt=""
-									/>
-								</div>
-								<div class="data-card-text">
-									<p><span id="pm25data"></span></p>
-									<script src="realtime.js"></script>
-									<p style="font-size: 1rem">PM2.5 ug/m3</p>
-								</div>
-							</div>
-						</div> -->
-						<div class="data-card-container">
-							<div class="data-card">
-								<div class="data-card-icon">
-									<img
-										class="parameter-icon"
-										src="https://cdn-icons-png.flaticon.com/128/3166/3166904.png"
-										alt=""
-									/>
-								</div>
-								<div class="data-card-text">
-									<p><span id="pm10data"></span></p>
-									<script src="realtime.js"></script>
-									<p style="font-size: 1rem">PM10 ug/m3</p>
-								</div>
-							</div>
-						</div>
+
 						<div class="data-card-container">
 							<div class="data-card">
 								<div class="data-card-icon">
@@ -135,7 +150,9 @@
 								<div class="data-card-text">
 									<p><span id="gas1data"></span></p>
 									<script src="realtime.js"></script>
-									<p style="font-size: 1rem">Formaldehyde ppb</p>
+									<p style="font-size: 0.75rem; font-weight: 500">
+										Formaldehyde ppb
+									</p>
 								</div>
 							</div>
 						</div>
@@ -151,9 +168,8 @@
 								<div class="data-card-text">
 									<p><span id="tempdata"></span></p>
 									<script src="realtime.js"></script>
-									<p style="font-size: 1rem">
-										Temperature <br />
-										°C
+									<p style="font-size: 0.75rem; font-weight: 500">
+										Temperature °C
 									</p>
 								</div>
 							</div>
@@ -170,7 +186,9 @@
 								<div class="data-card-text">
 									<p><span id="humiditydata"></span></p>
 									<script src="realtime.js"></script>
-									<p style="font-size: 1rem">Relative Humidity %</p>
+									<p style="font-size: 0.75rem; font-weight: 500">
+										Relative Humidity %
+									</p>
 								</div>
 							</div>
 						</div>
@@ -184,6 +202,16 @@
 						</script>
 					</div>
 				</div>
+			</div>
+
+			<div class="div" style="margin-top: -50em">
+				<script
+					type="module"
+					src="https://unpkg.com/@splinetool/viewer@0.9.522/build/spline-viewer.js"
+				></script>
+				<spline-viewer
+					url="https://prod.spline.design/VNFdE7FbN7jOOO-H/scene.splinecode"
+				></spline-viewer>
 			</div>
 		</section>
 	</body>
